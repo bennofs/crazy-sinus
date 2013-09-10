@@ -1,3 +1,33 @@
 #view {
     border: 1px dotted gray;
 }
+
+#help {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+#help-content {
+    width: 400px;
+    background-color: hsla(120, 100%, 90%, 0.70);
+    -webkit-border-radius: 10px;
+    padding: 2px 10px 0px 10px;
+}
+
+#help h1 {
+    margin: 3px;
+    display: block;
+    border-bottom: 1px solid gray;
+}
+
+#help-button {
+    color: darkred;
+    padding: 10px;
+    text-decoration: none;
+    font-style: italic;
+}
+
+#help-button:hover {
+    text-decoration: underline;
+}

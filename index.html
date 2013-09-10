@@ -4,13 +4,28 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Crazy Sinus</title>
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/normalize/2.1.2/normalize.css">
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/normalize/2.1.2/normalize.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="author" href="humans.txt">
   <body>
-    <canvas id="view" width="800" height="400">
+    <canvas id="view">
       Leider werden HTML5-Canvas von deinem Browser nicht unterstützt.
     </canvas>
+    <div id="help">
+      <a id="help-button" href="#">Tasten</a>
+      <div id="help-content">
+        <ul> 
+          <li>Mit den Pfeiltasten lässt sich der Graph verschieben
+          <li>Mit Strg+Pfeiltaste kann der Graph in eine Richtung gedehnt oder gestaucht werden
+          <li>Leertaste setzt eine Markierung auf dem Graphen
+          <li>Enter setzt den Graph in den Ausgangszustand zurück und entfernt alle Markierungen. Mit den Sondertasten lassen sich außerdem bestimmte Teile zurücksetzten:
+            <ul>
+              <li> Mit Alt+Enter werden nur Markierungen entfernt.
+              <li> Mit Strg+Enter wird nur der Graph in die Ausgangsstellung gebracht, die Markierungen werden beibehalten.
+            </ul>
+        </ul>
+      </duv>
+    </div>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script src="js/sinus.js"></script>
 </html>
