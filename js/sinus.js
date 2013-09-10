@@ -3,7 +3,7 @@ function drawSinus(view, f) {
   var height = view.canvas.height;
   view.moveTo(0, height/2);
   for(var i = -width/2; i * 30 < width/2; i+=0.2) {
-    view.lineTo(width/2 + i * 30, height/2 + -f(i) * 100);
+    view.lineTo(width/2 + i * 30, height/2 - f(i) * 100);
   }
 }
 
@@ -27,10 +27,17 @@ function render(view, canvas) {
   var s = Math.PI;
   console.log("Render");
   function mainLoop() {
+    // Update
     s -= 0.01;
+
+    // Clear screen
     canvas.width = canvas.width;
+
+    // Make path
     drawAxes(view);
     drawSinus(view, function(i) { return Math.sin((i + Math.sin(s) * 10) * Math.sin(s))});
+    
+    // Draw path
     view.stroke();
     requestAnimFrame(mainLoop);
   }
